@@ -44,6 +44,7 @@
             this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colName1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTeam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPlayerUrl = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colImageUrl = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPosition = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,7 +62,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.colTeam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FortyFourManagement.UserControls.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl), true);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamBindingSource)).BeginInit();
@@ -179,7 +180,7 @@
             this.panelControlBottom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControlBottom.Location = new System.Drawing.Point(0, 0);
             this.panelControlBottom.Name = "panelControlBottom";
-            this.panelControlBottom.Size = new System.Drawing.Size(1051, 213);
+            this.panelControlBottom.Size = new System.Drawing.Size(1051, 212);
             this.panelControlBottom.TabIndex = 0;
             // 
             // gridControlPlayers
@@ -189,7 +190,7 @@
             this.gridControlPlayers.Location = new System.Drawing.Point(2, 2);
             this.gridControlPlayers.MainView = this.gridView2;
             this.gridControlPlayers.Name = "gridControlPlayers";
-            this.gridControlPlayers.Size = new System.Drawing.Size(1047, 209);
+            this.gridControlPlayers.Size = new System.Drawing.Size(1047, 208);
             this.gridControlPlayers.TabIndex = 0;
             this.gridControlPlayers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -223,6 +224,13 @@
             this.colName1.Name = "colName1";
             this.colName1.Visible = true;
             this.colName1.VisibleIndex = 0;
+            // 
+            // colTeam
+            // 
+            this.colTeam.FieldName = "Team";
+            this.colTeam.Name = "colTeam";
+            this.colTeam.Visible = true;
+            this.colTeam.VisibleIndex = 11;
             // 
             // colPlayerUrl
             // 
@@ -290,14 +298,13 @@
             // popupMenuTeams
             // 
             this.popupMenuTeams.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemGetPlayers),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemSaveTeams)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemGetPlayers)});
             this.popupMenuTeams.Manager = this.barManager1;
             this.popupMenuTeams.Name = "popupMenuTeams";
             // 
             // barButtonItemGetPlayers
             // 
-            this.barButtonItemGetPlayers.Caption = "Spieler Laden";
+            this.barButtonItemGetPlayers.Caption = "Daten Speichern";
             this.barButtonItemGetPlayers.Id = 0;
             this.barButtonItemGetPlayers.Name = "barButtonItemGetPlayers";
             this.barButtonItemGetPlayers.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemGetPlayers_ItemClick);
@@ -352,12 +359,9 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 448);
             // 
-            // colTeam
+            // splashScreenManager1
             // 
-            this.colTeam.FieldName = "Team";
-            this.colTeam.Name = "colTeam";
-            this.colTeam.Visible = true;
-            this.colTeam.VisibleIndex = 11;
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // UCUpdate
             // 
@@ -424,5 +428,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraGrid.Columns.GridColumn colTeam;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

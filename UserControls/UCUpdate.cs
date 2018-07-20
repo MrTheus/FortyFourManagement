@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using FortyFourManagement.Objects;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using DevExpress.XtraSplashScreen;
+using DevExpress.XtraEditors.Drawing;
 
 namespace FortyFourManagement.UserControls
 {
@@ -48,48 +50,51 @@ namespace FortyFourManagement.UserControls
 
         public void GetTeams()
         {
-            PlayerDB.PlayerDB playerDB = new PlayerDB.PlayerDB();
-            List<PlayerDB.Models.Team> newTeams = new List<PlayerDB.Models.Team>();
-            List<PlayerDB.Models.Player> newPlayers = new List<PlayerDB.Models.Player>();
+                splashScreenManager1.ShowWaitForm();
+                PlayerDB.PlayerDB playerDB = new PlayerDB.PlayerDB();
+                List<PlayerDB.Models.Team> newTeams = new List<PlayerDB.Models.Team>();
+                List<PlayerDB.Models.Player> newPlayers = new List<PlayerDB.Models.Player>();
 
-            newTeams = playerDB.GetTeams(League, Saison);
+                newTeams = playerDB.GetTeams(League, Saison);
 
-            foreach (PlayerDB.Models.Team newTeam in newTeams)
-            {
-                Team team = new Team();
-                team.Icon = newTeam.Icon;
-                team.MarketValue = newTeam.MarketValue;
-                team.MarketValueMedian = newTeam.MarketValueMedian;
-                team.Name = newTeam.Name;
-                team.PlayerCount = newTeam.PlayerCount;
-                team.TeamPlayersUrl = newTeam.TeamPlayersUrl;
-                team.TeamUrl = newTeam.TeamUrl;
-
-                Teams.Add(team);
-
-                newPlayers = playerDB.GetPlayers(newTeam);
-
-                foreach (PlayerDB.Models.Player newPlayer in newPlayers)
+                foreach (PlayerDB.Models.Team newTeam in newTeams)
                 {
-                    Player player = new Player();
-                    player.Team = newTeam.Name;
-                    player.BirthDate = newPlayer.BirthDate;
-                    player.ImageUrl = newPlayer.ImageUrl;
-                    player.IsCaptain = newPlayer.IsCaptain;
-                    player.IsNew = newPlayer.IsNew;
-                    player.Loaned = newPlayer.Loaned;
-                    player.MarketValue = newPlayer.MarketValue;
-                    player.Name = newPlayer.Name;
-                    player.Number = newPlayer.Number;
-                    player.PlayerUrl = newPlayer.PlayerUrl;
-                    player.Position = newPlayer.Position;
+                    Team team = new Team();
+                    team.Icon = newTeam.Icon;
+                    team.MarketValue = newTeam.MarketValue;
+                    team.MarketValueMedian = newTeam.MarketValueMedian;
+                    team.Name = newTeam.Name;
+                    team.PlayerCount = newTeam.PlayerCount;
+                    team.TeamPlayersUrl = newTeam.TeamPlayersUrl;
+                    team.TeamUrl = newTeam.TeamUrl;
 
-                    Players.Add(player);
+                    Teams.Add(team);
+
+                    newPlayers = playerDB.GetPlayers(newTeam);
+
+                    foreach (PlayerDB.Models.Player newPlayer in newPlayers)
+                    {
+                        Player player = new Player();
+                        player.Team = newTeam.Name;
+                        player.BirthDate = newPlayer.BirthDate;
+                        player.ImageUrl = newPlayer.ImageUrl;
+                        player.IsCaptain = newPlayer.IsCaptain;
+                        player.IsNew = newPlayer.IsNew;
+                        player.Loaned = newPlayer.Loaned;
+                        player.MarketValue = newPlayer.MarketValue;
+                        player.Name = newPlayer.Name;
+                        player.Number = newPlayer.Number;
+                        player.PlayerUrl = newPlayer.PlayerUrl;
+                        player.Position = newPlayer.Position;
+
+                        Players.Add(player);
+                    }
                 }
-            }
-            
-            gridViewTeam.RefreshData();
-            gridView2.RefreshData();
+
+                gridViewTeam.RefreshData();
+                gridView2.RefreshData();
+            splashScreenManager1.CloseWaitForm();
+           
         }
 
         private void gridControlTeam_MouseUp(object sender, MouseEventArgs e)

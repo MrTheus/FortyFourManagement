@@ -47,6 +47,7 @@
             this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.panelControlMain = new DevExpress.XtraEditors.PanelControl();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControlMain)).BeginInit();
@@ -195,6 +196,10 @@
             // 
             this.mvvmContext1.ContainerControl = this;
             // 
+            // defaultLookAndFeel
+            // 
+            this.defaultLookAndFeel.LookAndFeel.SkinName = "Office 2010 Black";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,5 +239,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement14;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2018191;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementUpdate2018191;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel;
     }
 }
