@@ -61,6 +61,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.colTeam = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamBindingSource)).BeginInit();
@@ -201,6 +202,7 @@
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colName1,
+            this.colTeam,
             this.colPlayerUrl,
             this.colImageUrl,
             this.colPosition,
@@ -350,6 +352,13 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 448);
             // 
+            // colTeam
+            // 
+            this.colTeam.FieldName = "Team";
+            this.colTeam.Name = "colTeam";
+            this.colTeam.Visible = true;
+            this.colTeam.VisibleIndex = 11;
+            // 
             // UCUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,5 +423,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraGrid.Columns.GridColumn colTeam;
     }
 }

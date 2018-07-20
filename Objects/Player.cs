@@ -14,6 +14,8 @@ namespace FortyFourManagement.Objects
         /// </summary>
         public String Name { get; set; }
 
+        public String Team { get; set; }
+
         /// <summary>
         /// Url for the Player
         /// </summary>

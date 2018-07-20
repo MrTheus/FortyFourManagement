@@ -72,6 +72,7 @@ namespace FortyFourManagement.UserControls
                 foreach (PlayerDB.Models.Player newPlayer in newPlayers)
                 {
                     Player player = new Player();
+                    player.Team = newTeam.Name;
                     player.BirthDate = newPlayer.BirthDate;
                     player.ImageUrl = newPlayer.ImageUrl;
                     player.IsCaptain = newPlayer.IsCaptain;
