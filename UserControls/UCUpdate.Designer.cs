@@ -45,23 +45,19 @@
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colName1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTeam = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPlayerUrl = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colImageUrl = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPosition = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNumber = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colBirthDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMarketValue1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsCaptain = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLoaned = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsNew = new DevExpress.XtraGrid.Columns.GridColumn();
             this.popupMenuTeams = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItemGetPlayers = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItemSaveTeams = new DevExpress.XtraBars.BarButtonItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barButtonItemSaveTeams = new DevExpress.XtraBars.BarButtonItem();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::FortyFourManagement.UserControls.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl), true);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTeam)).BeginInit();
@@ -81,10 +77,11 @@
             // 
             // colUsed
             // 
+            this.colUsed.Caption = "Benutzt";
             this.colUsed.FieldName = "Used";
             this.colUsed.Name = "colUsed";
             this.colUsed.Visible = true;
-            this.colUsed.VisibleIndex = 10;
+            this.colUsed.VisibleIndex = 6;
             // 
             // colMarketValueMedian
             // 
@@ -202,20 +199,18 @@
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colPosition,
             this.colName1,
             this.colTeam,
-            this.colPlayerUrl,
-            this.colImageUrl,
-            this.colPosition,
             this.colNumber,
-            this.colBirthDate,
-            this.colMarketValue1,
             this.colIsCaptain,
             this.colLoaned,
             this.colIsNew,
             this.colUsed});
             this.gridView2.GridControl = this.gridControlPlayers;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowFooter = true;
             // 
             // colName1
@@ -223,59 +218,33 @@
             this.colName1.FieldName = "Name";
             this.colName1.Name = "colName1";
             this.colName1.Visible = true;
-            this.colName1.VisibleIndex = 0;
+            this.colName1.VisibleIndex = 1;
             // 
             // colTeam
             // 
             this.colTeam.FieldName = "Team";
             this.colTeam.Name = "colTeam";
             this.colTeam.Visible = true;
-            this.colTeam.VisibleIndex = 11;
-            // 
-            // colPlayerUrl
-            // 
-            this.colPlayerUrl.FieldName = "PlayerUrl";
-            this.colPlayerUrl.Name = "colPlayerUrl";
-            this.colPlayerUrl.Visible = true;
-            this.colPlayerUrl.VisibleIndex = 1;
-            // 
-            // colImageUrl
-            // 
-            this.colImageUrl.FieldName = "ImageUrl";
-            this.colImageUrl.Name = "colImageUrl";
-            this.colImageUrl.Visible = true;
-            this.colImageUrl.VisibleIndex = 2;
+            this.colTeam.VisibleIndex = 3;
             // 
             // colPosition
             // 
             this.colPosition.FieldName = "Position";
             this.colPosition.Name = "colPosition";
             this.colPosition.Visible = true;
-            this.colPosition.VisibleIndex = 3;
+            this.colPosition.VisibleIndex = 0;
             // 
             // colNumber
             // 
+            this.colNumber.Caption = "Nummer";
             this.colNumber.FieldName = "Number";
             this.colNumber.Name = "colNumber";
             this.colNumber.Visible = true;
-            this.colNumber.VisibleIndex = 4;
-            // 
-            // colBirthDate
-            // 
-            this.colBirthDate.FieldName = "BirthDate";
-            this.colBirthDate.Name = "colBirthDate";
-            this.colBirthDate.Visible = true;
-            this.colBirthDate.VisibleIndex = 5;
-            // 
-            // colMarketValue1
-            // 
-            this.colMarketValue1.FieldName = "MarketValue";
-            this.colMarketValue1.Name = "colMarketValue1";
-            this.colMarketValue1.Visible = true;
-            this.colMarketValue1.VisibleIndex = 6;
+            this.colNumber.VisibleIndex = 2;
             // 
             // colIsCaptain
             // 
+            this.colIsCaptain.Caption = "Capitan";
             this.colIsCaptain.FieldName = "IsCaptain";
             this.colIsCaptain.Name = "colIsCaptain";
             this.colIsCaptain.Visible = true;
@@ -283,17 +252,19 @@
             // 
             // colLoaned
             // 
+            this.colLoaned.Caption = "Ausgeliehen";
             this.colLoaned.FieldName = "Loaned";
             this.colLoaned.Name = "colLoaned";
             this.colLoaned.Visible = true;
-            this.colLoaned.VisibleIndex = 8;
+            this.colLoaned.VisibleIndex = 4;
             // 
             // colIsNew
             // 
+            this.colIsNew.Caption = "Neu";
             this.colIsNew.FieldName = "IsNew";
             this.colIsNew.Name = "colIsNew";
             this.colIsNew.Visible = true;
-            this.colIsNew.VisibleIndex = 9;
+            this.colIsNew.VisibleIndex = 5;
             // 
             // popupMenuTeams
             // 
@@ -308,12 +279,6 @@
             this.barButtonItemGetPlayers.Id = 0;
             this.barButtonItemGetPlayers.Name = "barButtonItemGetPlayers";
             this.barButtonItemGetPlayers.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemGetPlayers_ItemClick);
-            // 
-            // barButtonItemSaveTeams
-            // 
-            this.barButtonItemSaveTeams.Caption = "Teams Speichern";
-            this.barButtonItemSaveTeams.Id = 1;
-            this.barButtonItemSaveTeams.Name = "barButtonItemSaveTeams";
             // 
             // barManager1
             // 
@@ -358,6 +323,12 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1051, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 448);
+            // 
+            // barButtonItemSaveTeams
+            // 
+            this.barButtonItemSaveTeams.Caption = "Teams Speichern";
+            this.barButtonItemSaveTeams.Id = 1;
+            this.barButtonItemSaveTeams.Name = "barButtonItemSaveTeams";
             // 
             // splashScreenManager1
             // 
@@ -410,12 +381,8 @@
         private System.Windows.Forms.BindingSource playerBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colName1;
-        private DevExpress.XtraGrid.Columns.GridColumn colPlayerUrl;
-        private DevExpress.XtraGrid.Columns.GridColumn colImageUrl;
         private DevExpress.XtraGrid.Columns.GridColumn colPosition;
         private DevExpress.XtraGrid.Columns.GridColumn colNumber;
-        private DevExpress.XtraGrid.Columns.GridColumn colBirthDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colMarketValue1;
         private DevExpress.XtraGrid.Columns.GridColumn colIsCaptain;
         private DevExpress.XtraGrid.Columns.GridColumn colLoaned;
         private DevExpress.XtraGrid.Columns.GridColumn colIsNew;

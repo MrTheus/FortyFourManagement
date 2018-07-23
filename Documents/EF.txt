@@ -1,0 +1,5 @@
+﻿Befehle:
+Add-Migration ""
+//Migration erstellen -> Diese Daten werden als DB erstellt
+Update-Database 
+// Alle Klassen die in Models drin sind, werden als Tabellen angelegt
