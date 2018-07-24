@@ -100,6 +100,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Providers\FootballProvider.cs" />
+    <Compile Include="UserControls\UCCreateUploudPlan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCCreateUploudPlan.Designer.cs">
+      <DependentUpon>UCCreateUploudPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCOverview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCCreateUploudPlan.resx">
+      <DependentUpon>UCCreateUploudPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCOverview.resx">
       <DependentUpon>UCOverview.cs</DependentUpon>

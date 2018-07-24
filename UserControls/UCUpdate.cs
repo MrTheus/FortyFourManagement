@@ -48,7 +48,7 @@ namespace FortyFourManagement.UserControls
             playerBindingSource.DataSource = Players;
         }
 
-        public void GetTeams()
+        public void GetData()
         {
                 splashScreenManager1.ShowWaitForm();
                 PlayerDB.PlayerDB playerDB = new PlayerDB.PlayerDB();
@@ -93,7 +93,7 @@ namespace FortyFourManagement.UserControls
 
                 gridViewTeam.RefreshData();
                 gridView2.RefreshData();
-            splashScreenManager1.CloseWaitForm();
+                splashScreenManager1.CloseWaitForm();
            
         }
 

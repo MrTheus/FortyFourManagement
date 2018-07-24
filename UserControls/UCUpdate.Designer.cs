@@ -43,9 +43,9 @@
             this.gridControlPlayers = new DevExpress.XtraGrid.GridControl();
             this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colPosition = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colName1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTeam = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPosition = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIsCaptain = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLoaned = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -213,6 +213,13 @@
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowFooter = true;
             // 
+            // colPosition
+            // 
+            this.colPosition.FieldName = "Position";
+            this.colPosition.Name = "colPosition";
+            this.colPosition.Visible = true;
+            this.colPosition.VisibleIndex = 0;
+            // 
             // colName1
             // 
             this.colName1.FieldName = "Name";
@@ -226,13 +233,6 @@
             this.colTeam.Name = "colTeam";
             this.colTeam.Visible = true;
             this.colTeam.VisibleIndex = 3;
-            // 
-            // colPosition
-            // 
-            this.colPosition.FieldName = "Position";
-            this.colPosition.Name = "colPosition";
-            this.colPosition.Visible = true;
-            this.colPosition.VisibleIndex = 0;
             // 
             // colNumber
             // 

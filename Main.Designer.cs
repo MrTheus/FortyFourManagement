@@ -36,7 +36,6 @@
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2018191 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementBundesligaUpdate = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElementUpdate2018191 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -45,9 +44,11 @@
             this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElementUpdate2018191 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.panelControlMain = new DevExpress.XtraEditors.PanelControl();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.accordionControlElement2018191Update = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControlMain)).BeginInit();
@@ -102,6 +103,7 @@
             // 
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement2018191});
+            this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Übersicht";
             // 
@@ -114,17 +116,10 @@
             // accordionControlElementBundesligaUpdate
             // 
             this.accordionControlElementBundesligaUpdate.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElementUpdate2018191});
+            this.accordionControlElement2018191Update});
+            this.accordionControlElementBundesligaUpdate.Expanded = true;
             this.accordionControlElementBundesligaUpdate.Name = "accordionControlElementBundesligaUpdate";
             this.accordionControlElementBundesligaUpdate.Text = "Update";
-            this.accordionControlElementBundesligaUpdate.Click += new System.EventHandler(this.accordionControlElementBundesligaUpdate_Click);
-            // 
-            // accordionControlElementUpdate2018191
-            // 
-            this.accordionControlElementUpdate2018191.Name = "accordionControlElementUpdate2018191";
-            this.accordionControlElementUpdate2018191.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElementUpdate2018191.Text = "2018/19 - 1";
-            this.accordionControlElementUpdate2018191.Click += new System.EventHandler(this.accordionControlElementUpdate2018191_Click);
             // 
             // accordionControlElement4
             // 
@@ -182,6 +177,13 @@
             this.accordionControlElement14.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement14.Text = "Uploadplan";
             // 
+            // accordionControlElementUpdate2018191
+            // 
+            this.accordionControlElementUpdate2018191.Name = "accordionControlElementUpdate2018191";
+            this.accordionControlElementUpdate2018191.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElementUpdate2018191.Text = "2018/19 - 1";
+            this.accordionControlElementUpdate2018191.Click += new System.EventHandler(this.accordionControlElementUpdate2018191_Click);
+            // 
             // panelControlMain
             // 
             this.panelControlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -199,6 +201,13 @@
             // defaultLookAndFeel
             // 
             this.defaultLookAndFeel.LookAndFeel.SkinName = "Office 2010 Black";
+            // 
+            // accordionControlElement2018191Update
+            // 
+            this.accordionControlElement2018191Update.Name = "accordionControlElement2018191Update";
+            this.accordionControlElement2018191Update.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement2018191Update.Text = "2018/19 - 1";
+            this.accordionControlElement2018191Update.Click += new System.EventHandler(this.accordionControlElementUpdate2018191_Click);
             // 
             // Main
             // 
@@ -240,5 +249,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2018191;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementUpdate2018191;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2018191Update;
     }
 }

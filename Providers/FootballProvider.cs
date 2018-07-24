@@ -18,13 +18,13 @@ namespace FortyFourManagement.Providers
             }
         }
 
-        public async Task Add(Team team)
+        public void Add(Team team)
         {
             using (var ctx = new FootballDataContext())
             {
                 ctx.Teams.Add(team);
 
-                await ctx.SaveChangesAsync();
+                ctx.SaveChanges();
             }
         }
 

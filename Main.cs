@@ -19,11 +19,6 @@ namespace FortyFourManagement
             InitializeComponent();
         }
 
-        private void accordionControlElementBundesligaUpdate_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void accordionControlElementUpdate2018191_Click(object sender, EventArgs e)
         {
             panelControlMain.Controls.Clear();
@@ -35,7 +30,7 @@ namespace FortyFourManagement
             panelControlMain.Controls.Add(ucUpdate);
             ucUpdate.Show();
             ucUpdate.Dock = DockStyle.Fill;
-            ucUpdate.GetTeams();
+            ucUpdate.GetData();
         }
     }
 }
